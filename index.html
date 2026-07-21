@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About EAT · EAT COE</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site-header">
+    <a class="logo" href="index.html">
+      <img src="assets/logo.png" alt="EAT COE logo">
+      <span class="lt"><b>EAT COE</b><span>ERP / CRM Testing Repository</span></span>
+    </a>
+    <button class="nav-toggle" onclick="document.querySelector('.site-nav').classList.toggle('open')">&#9776;</button>
+    <nav class="site-nav">
+        <a class="active" href="index.html">Home</a>
+        <a href="index.html#pillars">Pillars</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="sitemap.html">Sitemap</a>
+        <a href="#" onclick="toggleAbout();return false;">About</a>
+    </nav>
+  </header>
+  <section class="hero">
+    <span class="eyebrow">Center of Excellence</span>
+    <h1>Welcome to the EAT Center of Excellence</h1>
+    <p class="tagline">Find standards, tools, monitoring practices, capability programs and innovation pilots across all 29 tracked deliverables.</p>
+    <div class="hero-search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <input id="searchInput" type="text" placeholder="Search deliverables, pillars, owners, keywords…" autocomplete="off">
+    </div>
+    <div class="filters">
+      <h3>Filter by pillar</h3>
+      <div class="filter-pills" id="filterPills">
+        <button class="active" onclick="filterPillar('All', this)">All</button>
+        <button onclick="filterPillar('01', this)">01 · Standards</button>
+        <button onclick="filterPillar('02', this)">02 · Tools</button>
+        <button onclick="filterPillar('03', this)">03 · Monitoring</button>
+        <button onclick="filterPillar('04', this)">04 · Capability</button>
+        <button onclick="filterPillar('05', this)">05 · Innovation</button>
+      </div>
+    </div>
+    <div id="heroResults"></div>
+  </section>
+  <main class="page-content"><div class="wrap">
+<div class="prose">
+<p><strong>What EAT is.</strong> EAT is a Center of Excellence body, not a project team. It sits above individual ERP/CRM testing engagements and owns the standards, tools, monitoring practices, capability programs and innovation pilots that every engagement draws on. Its output is a living repository: strategy documents, SOPs, templates, trackers and playbooks organized under five pillars, each broken into a discrete, ownable deliverable ("user story") with a named responsibility and clear acceptance criteria.</p>
+<p><strong>How it is built.</strong> The COE backlog is tracked exactly like a product backlog — 29 deliverables across 5 pillars, each carrying a status (Done / In Progress / To Do / Backlog), an owner role, and the artifacts that satisfy it. That backlog is the single source of truth behind the <a href="dashboard.html" style="color:var(--teal)">readiness dashboard</a> and behind the folder structure of this site.</p>
+<p><strong>How it helps.</strong> A new ERP or CRM testing engagement should not have to write a test strategy, build a defect log template, or figure out a governance cadence from scratch. It opens the relevant pillar page here, pulls the current-version document or template, and adapts it — saving ramp-up time and keeping quality practices consistent across programs.</p>
+</div>
+<div class="callout">
+<h4>How this repository is organized</h4>
+<p>Five pillars → each pillar's numbered sub-areas (e.g. 1.1, 1.2 …) → each sub-area's page carries its purpose, owner, acceptance criteria and the actual documents/templates for that deliverable. The same five pillars, in the same order, are used across the tracker, the folder structure, and this site — so a reference like "1.4" means the same thing everywhere.</p>
+</div>
+<div class="section-title" id="pillars">The five pillars</div>
+<div class="grid cols-5">
+<a class="card pillar-card" href="01-standards.html">
+<div class="num">01</div>
+<h3>Standards &amp; Best Practices</h3>
+<p>The rulebook every ERP/CRM testing project inherits on day one.</p>
+<div class="bar-track"><div class="bar-fill" style="width:92%;background:#1F8A70"></div></div>
+<div class="stat-row"><span>5/6 done</span><span>92%</span></div>
+</a>
+<a class="card pillar-card" href="02-tools.html">
+<div class="num">02</div>
+<h3>Tools &amp; Technology</h3>
+<p>How the COE chooses, documents and wires up the tools testers actually use.</p>
+<div class="bar-track"><div class="bar-fill" style="width:62%;background:#C7841B"></div></div>
+<div class="stat-row"><span>2/4 done</span><span>62%</span></div>
+</a>
+<a class="card pillar-card" href="03-monitoring.html">
+<div class="num">03</div>
+<h3>Monitoring &amp; Continuous Improvement</h3>
+<p>The feedback loop that keeps the COE's practices honest and current.</p>
+<div class="bar-track"><div class="bar-fill" style="width:42%;background:#C7841B"></div></div>
+<div class="stat-row"><span>2/6 done</span><span>42%</span></div>
+</a>
+<a class="card pillar-card" href="04-capability.html">
+<div class="num">04</div>
+<h3>Capability Building &amp; Enablement</h3>
+<p>Growing the people, knowledge and domain depth behind every engagement.</p>
+<div class="bar-track"><div class="bar-fill" style="width:44%;background:#C7841B"></div></div>
+<div class="stat-row"><span>3/8 done</span><span>44%</span></div>
+</a>
+<a class="card pillar-card" href="05-innovation.html">
+<div class="num">05</div>
+<h3>Innovation</h3>
+<p>Where the COE tests AI on itself before it reaches a project.</p>
+<div class="bar-track"><div class="bar-fill" style="width:10%;background:#B4503F"></div></div>
+<div class="stat-row"><span>0/5 done</span><span>10%</span></div>
+</a></div>
+<div class="section-title">Repository at a glance</div>
+<div class="kpi-row">
+<div class="kpi done"><div class="n">12</div><div class="l">Deliverables done</div></div>
+<div class="kpi inprogress"><div class="n">4</div><div class="l">In progress</div></div>
+<div class="kpi todo"><div class="n">5</div><div class="l">To do</div></div>
+<div class="kpi backlog"><div class="n">8</div><div class="l">Backlog</div></div>
+</div>
+<p style="font-size:13px;color:var(--text-mute)">Overall COE readiness is <strong style="color:var(--ink)">50%</strong> across 29 tracked deliverables. See the full <a href="dashboard.html" style="color:var(--teal)">readiness dashboard</a> or the <a href="sitemap.html" style="color:var(--teal)">complete sitemap</a>.</p>
+  </div></main>
+  <footer class="site-footer">Enterprise Application Testing (EAT) Center of Excellence — internal repository &middot; Source tracker: <b>00_ERP_COE_Tracker.xlsx</b></footer>
+
+<div id="about-overlay" onclick="toggleAbout()"></div>
+<div id="about-modal">
+  <div id="about-header">About EAT<span id="about-close" onclick="toggleAbout()">&times;</span></div>
+  <div id="about-body">
+    <p><strong>EAT</strong> is <strong>Enterprise Application Testing</strong>, the Center of Excellence behind every ERP/CRM testing engagement. It owns the standards, tools, monitoring practices, capability programs and innovation pilots that projects draw on — tracked as a 29-item backlog across 5 pillars.</p>
+    <p>Explore the full breakdown on the <a href="dashboard.html" style="color:var(--teal)">Readiness Dashboard</a> or the <a href="sitemap.html" style="color:var(--teal)">Sitemap</a>.</p>
+  </div>
+</div>
+
+
+<!-- ============================= -->
+<!-- AI Knowledge Assistant -->
+<!-- ============================= -->
+<div id="chatbot-button" onclick="toggleChatbot()"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="4" y="8" width="16" height="12" rx="3"/>
+  <circle cx="9" cy="14" r="1.1" fill="white" stroke="none"/>
+  <circle cx="15" cy="14" r="1.1" fill="white" stroke="none"/>
+  <path d="M9 17.3h6"/>
+  <path d="M12 8V5"/>
+  <circle cx="12" cy="3.4" r="1.2" fill="white" stroke="none"/>
+  <path d="M2 12h2M20 12h2"/>
+</svg></div>
+<div id="chatbot-window">
+  <div id="chat-header">
+    <span>EAT Knowledge Assistant</span>
+    <span class="close" onclick="toggleChatbot()">&times;</span>
+  </div>
+  <div id="chat-body">
+    <div class="bot-message">
+      <strong>👋 Welcome!</strong><br><br>
+      I can help you find deliverables across all five COE pillars:
+      <ul>
+        <li>Standards & Best Practices</li>
+        <li>Tools & Technology</li>
+        <li>Monitoring & Continuous Improvement</li>
+        <li>Capability Building & Enablement</li>
+        <li>Innovation</li>
+      </ul>
+      Ask me things like:<br><br>
+      • Show me deliverable 3.6<br>
+      • What's done in Standards?<br>
+      • Automation framework
+    </div>
+  </div>
+  <div id="chat-footer">
+    <input id="chat-input" type="text" placeholder="Ask about the COE repository…" onkeypress="if(event.key==='Enter'){sendMessage();}">
+    <button onclick="sendMessage()">Send</button>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.js"></script>
+<script src="js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Readiness Dashboard · EAT COE</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site-header">
+    <a class="logo" href="index.html">
+      <img src="assets/logo.png" alt="EAT COE logo">
+      <span class="lt"><b>EAT COE</b><span>ERP / CRM Testing Repository</span></span>
+    </a>
+    <button class="nav-toggle" onclick="document.querySelector('.site-nav').classList.toggle('open')">&#9776;</button>
+    <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="index.html#pillars">Pillars</a>
+        <a class="active" href="dashboard.html">Dashboard</a>
+        <a href="sitemap.html">Sitemap</a>
+        <a href="#" onclick="toggleAbout();return false;">About</a>
+    </nav>
+  </header>
+  <section class="hero hero-sm">
+    <span class="eyebrow">Live readiness</span>
+    <h1>EAT Readiness Dashboard</h1>
+    <p class="tagline">Rolled up from the COE backlog — 29 deliverables across 5 pillars. Source of truth: 00_ERP_COE_Tracker.xlsx.</p>
+  </section>
+  <main class="page-content"><div class="wrap">
+<div class="card">
+<div class="dial-wrap">
+<svg height="190" viewbox="0 0 190 190" width="190">
+<circle cx="95" cy="95" fill="none" r="80" stroke="#E6EAEB" stroke-width="14"></circle>
+<circle cx="95" cy="95" fill="none" r="80" stroke="#1F8A70" stroke-dasharray="502.7" stroke-dashoffset="251.7" stroke-linecap="butt" stroke-width="14" transform="rotate(-90 95 95)"></circle>
+<text fill="#0F1B2D" font-family="IBM Plex Mono" font-size="30" font-weight="600" text-anchor="middle" x="95" y="90">50%</text>
+<text fill="#5B6B76" font-family="IBM Plex Mono" font-size="11" letter-spacing="1" text-anchor="middle" x="95" y="112">READY</text>
+</svg>
+<div class="dial-figures">
+<div class="fig"><div class="n">29</div><div class="l">Total deliverables</div></div>
+<div class="fig"><div class="n">12</div><div class="l">Done</div></div>
+<div class="fig"><div class="n">17</div><div class="l">Remaining</div></div>
+</div>
+</div>
+<div style="display:flex;height:14px;border-radius:3px;overflow:hidden;margin:14px 0 8px;">
+<div style="width:41.38%;background:#1F8A70"></div>
+<div style="width:13.79%;background:#C7841B"></div>
+<div style="width:17.24%;background:#5B6B7A"></div>
+<div style="width:27.59%;background:#B4503F"></div>
+</div>
+<div class="legend">
+<span><i style="background:#1F8A70"></i>Done · 12</span>
+<span><i style="background:#C7841B"></i>In Progress · 4</span>
+<span><i style="background:#5B6B7A"></i>To Do · 5</span>
+<span><i style="background:#B4503F"></i>Backlog · 8</span>
+</div>
+</div>
+<div class="section-title">Progress by pillar</div>
+<div class="card">
+<div class="rail-row">
+<div class="rail-label"><a href="01-standards.html">01 — Standards &amp; Best Practices</a><div class="sub">5/6 deliverables done</div></div>
+<div class="rail-track"><div class="rail-fill" style="width:91.7%;background:#1F8A70"></div></div>
+<div class="rail-pct">92%</div>
+</div>
+<div class="rail-row">
+<div class="rail-label"><a href="02-tools.html">02 — Tools &amp; Technology</a><div class="sub">2/4 deliverables done</div></div>
+<div class="rail-track"><div class="rail-fill" style="width:62.5%;background:#C7841B"></div></div>
+<div class="rail-pct">62%</div>
+</div>
+<div class="rail-row">
+<div class="rail-label"><a href="03-monitoring.html">03 — Monitoring &amp; Continuous Improvement</a><div class="sub">2/6 deliverables done</div></div>
+<div class="rail-track"><div class="rail-fill" style="width:41.7%;background:#C7841B"></div></div>
+<div class="rail-pct">42%</div>
+</div>
+<div class="rail-row">
+<div class="rail-label"><a href="04-capability.html">04 — Capability Building &amp; Enablement</a><div class="sub">3/8 deliverables done</div></div>
+<div class="rail-track"><div class="rail-fill" style="width:43.8%;background:#C7841B"></div></div>
+<div class="rail-pct">44%</div>
+</div>
+<div class="rail-row">
+<div class="rail-label"><a href="05-innovation.html">05 — Innovation</a><div class="sub">0/5 deliverables done</div></div>
+<div class="rail-track"><div class="rail-fill" style="width:10.0%;background:#B4503F"></div></div>
+<div class="rail-pct">10%</div>
+</div></div>
+<div class="section-title">Reading the dashboard</div>
+<div class="prose">
+<p><strong>Done</strong> — artifact published and available in the repository. <strong>In Progress</strong> — actively being authored. <strong>To Do</strong> — scoped and queued, not yet started. <strong>Backlog</strong> — identified but not yet scheduled.</p>
+<p>Standards &amp; Best Practices (92%) and Monitoring/Capability (~42–44%) anchor the COE today; Innovation (10%) is the newest pillar and the next place to invest.</p>
+</div>
+  </div></main>
+  <footer class="site-footer">Enterprise Application Testing (EAT) Center of Excellence — internal repository &middot; Source tracker: <b>00_ERP_COE_Tracker.xlsx</b></footer>
+
+<div id="about-overlay" onclick="toggleAbout()"></div>
+<div id="about-modal">
+  <div id="about-header">About EAT<span id="about-close" onclick="toggleAbout()">&times;</span></div>
+  <div id="about-body">
+    <p><strong>EAT</strong> is <strong>Enterprise Application Testing</strong>, the Center of Excellence behind every ERP/CRM testing engagement. It owns the standards, tools, monitoring practices, capability programs and innovation pilots that projects draw on — tracked as a 29-item backlog across 5 pillars.</p>
+    <p>Explore the full breakdown on the <a href="dashboard.html" style="color:var(--teal)">Readiness Dashboard</a> or the <a href="sitemap.html" style="color:var(--teal)">Sitemap</a>.</p>
+  </div>
+</div>
+
+
+<!-- ============================= -->
+<!-- AI Knowledge Assistant -->
+<!-- ============================= -->
+<div id="chatbot-button" onclick="toggleChatbot()"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="4" y="8" width="16" height="12" rx="3"/>
+  <circle cx="9" cy="14" r="1.1" fill="white" stroke="none"/>
+  <circle cx="15" cy="14" r="1.1" fill="white" stroke="none"/>
+  <path d="M9 17.3h6"/>
+  <path d="M12 8V5"/>
+  <circle cx="12" cy="3.4" r="1.2" fill="white" stroke="none"/>
+  <path d="M2 12h2M20 12h2"/>
+</svg></div>
+<div id="chatbot-window">
+  <div id="chat-header">
+    <span>EAT Knowledge Assistant</span>
+    <span class="close" onclick="toggleChatbot()">&times;</span>
+  </div>
+  <div id="chat-body">
+    <div class="bot-message">
+      <strong>👋 Welcome!</strong><br><br>
+      I can help you find deliverables across all five COE pillars:
+      <ul>
+        <li>Standards & Best Practices</li>
+        <li>Tools & Technology</li>
+        <li>Monitoring & Continuous Improvement</li>
+        <li>Capability Building & Enablement</li>
+        <li>Innovation</li>
+      </ul>
+      Ask me things like:<br><br>
+      • Show me deliverable 3.6<br>
+      • What's done in Standards?<br>
+      • Automation framework
+    </div>
+  </div>
+  <div id="chat-footer">
+    <input id="chat-input" type="text" placeholder="Ask about the COE repository…" onkeypress="if(event.key==='Enter'){sendMessage();}">
+    <button onclick="sendMessage()">Send</button>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.js"></script>
+<script src="js/site.js"></script>
+</body>
+</html>
